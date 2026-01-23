@@ -1,8 +1,29 @@
-export default function Home() {
-    return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Vunite!</h1>
-            <p className="text-lg text-gray-700">Your Laravel and React starter kit is set up and ready to go.</p>
-        </div>
-    );
-}
+import React from 'react';
+import MainLayout from '../Layout/MainLayout';
+import HeroSection from '../components/home/HeroSection';
+import ServicesGrid from '../components/home/ServicesGrid';
+import WhoWeSupport from '../components/home/WhoWeSupport';
+import RealStories from '../components/home/RealStories';
+import StatisticsGrid from '../components/home/StatisticsGrid';
+import HowItWorks from '../components/home/HowItWorks';
+import WhyChooseUs from '../components/home/WhyChooseUs';
+import Testimonials from '../components/home/Testimonials';
+import CTABanner from '../components/home/CTABanner';
+
+const LandingPage = () => {
+  return (
+    <MainLayout>
+      <HeroSection />
+      <ServicesGrid />
+      <WhoWeSupport />
+      <RealStories />
+      <StatisticsGrid />
+      <HowItWorks />
+      <WhyChooseUs />
+      <Testimonials />
+      <CTABanner />
+    </MainLayout>
+  );
+};
+
+export default LandingPage;

@@ -1,8 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+@source '../**/*.jsx';
+@source '../**/*.tsx';
 
 
+body {
+   font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.text-main { 
+  color:#0F6F75;
+}
+.text-pink { 
+  color:#FE616A;
+}
+.bg-main { 
+  background:#0F6F75;
+}
+.bg-pink { 
+  background:#FE616A;
+}
+
+
+@font-face {
+  font-family: 'Recoleta';
+  /* src: url('/fonts/Recoleta-Font-Family.ttf') format('truetype'); */
+  src: url('/public/fonts/Recoleta-Font-Family.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-recoleta {
+  font-family: 'Recoleta', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Recoleta', serif;
+}
+
+@layer components{
+  .button { @apply px-6 py-[13px] cursor-pointer text-white font-semibold rounded-[30px] text-sm text-center}
+}
+
+.bg-gr {
+  background: linear-gradient(90deg, #ED695E 0%, #7C9686 100%);
+}
+
+.text-gr { 
+   background: linear-gradient(90deg, #ED695E 0%, #7C9686 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gr { 
+    border: 2px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #ED695E, #ED695E) border-box;
+}
+
+.whychoosebg{ 
+  background: linear-gradient(117.54deg, #228990 0%, #21AC96 100%);
+}
+.swiper-wrapper {
+    height: auto !important;
+    padding-bottom: 70px;
+}
+
+.footerbg { 
+  background: linear-gradient(117.54deg, #228990 0%, #21AC96 100%);
+
+}
