@@ -12,12 +12,12 @@ const StatisticsGrid = () => {
   ];
 
   return (
-    <section className="bg-[#F5F5F5] relative py-20 relative">
+    <section className="bg-[#F5F5F5] relative py-12 md:py-20 relative">
       <div className="relative z-1 container mx-auto">
         <h2 className="text-start text-5xl font-recoleta font-bold text-main mb-2"><span className="text-pink">90 percent</span> of our clients choose to stay with us long-term</h2>
         <p className="text-start text-[18px] font-bold tracking-widest text-black my-6 uppercase">That trust comes from the way we care.</p>
         <p className="text-start text-[18px] font-light text-gray-500 ">At V Unite, we deliver high-quality, personalised NDIS support for people with complex and everyday needs. Regardless of the level of care required, our team is trained to create a safe, supportive environment that helps participants maintain healthy routines, build independence, and feel confident in their daily lives.</p>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-x-8 gap-y-12">
           {features.map((feature, idx) => (
             <div key={idx} className="flex flex-col items-start">
               <div className={`w-20 h-20 rounded-[14px] flex  

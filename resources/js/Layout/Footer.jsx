@@ -5,7 +5,7 @@ import { Link } from '@inertiajs/react';
 export const Footer = ({  contactInfo, quickLinks, services }) => {
   return (
     <>
-      <footer className={` footerbg text-white pt-20 pb-10`}>
+      <footer className={` footerbg text-white pt-8 pb-4 md:pt-20 md:pb-10`}>
           <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
             <div>
               <div className="bg-white w-fit p-4 rounded-xl mb-6">

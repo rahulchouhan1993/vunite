@@ -15,21 +15,23 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
+    <section className="py-20  bg-white">
+    <div className="container m-auto">
       <div className="text-center max-w-3xl mx-auto mb-6">
         <h2 className="font-recoleta text-3xl lg:text-4xl  font-bold text-main mb-4">Our NDIS Services</h2>
         <p className="text-gray-500 text-sm xl:text-normal">We provide flexible and reliable NDIS services designed to support your independence and wellbeing.</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {cards.map((service, idx) => (
           <ServiceItem key={idx} service={service} idx={idx} />
         ))}
       </div>
-      <div className="text-center mt-12">
+      <div className="text-center mt-6 md:mt-12">
         <button className="button !bg-white text-sm border-gr px-12 py-3">
           <span className='text-gr uppercase'>View All Services</span>
         </button>
       </div>
+    </div>
     </section>
   );
 };

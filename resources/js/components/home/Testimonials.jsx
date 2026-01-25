@@ -29,9 +29,10 @@ const Testimonials = () => {
   return (
     <section className="pt-24 pb-4 w-full ">
       <div className="container mx-auto relative" >
-          <h2 className="font-recoleta text-4xl font-bold text-main mb-12 uppercase">Testimonials</h2>
+          <h2 className="relative z-1 font-recoleta text-4xl font-bold text-main mb-6 md:mb-12 uppercase">Testimonials</h2>
           <img src={commas} alt='commas' className="absolute top-[-20px] right-[10%] w-full  object-contain max-w-[180px]" />
       </div>
+      <div className="px-6" >
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -56,6 +57,7 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+    </div>
     </section>
   );
 };

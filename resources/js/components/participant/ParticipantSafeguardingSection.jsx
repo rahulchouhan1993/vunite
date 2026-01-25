@@ -17,7 +17,7 @@ const ParticipantSafeguardingSection = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-[#F5F5F5] mb-20">
+    <section className="py-6 md:py-12 lg:py-16 bg-[#F5F5F5] mb-8 md:mb-20">
       <div className="container mx-auto px-5 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-28 items-center">
           <div>

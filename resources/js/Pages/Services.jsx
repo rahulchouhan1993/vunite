@@ -15,7 +15,7 @@ export default function Services() {
                 description={'Whether you need everyday assistance or complex care, our experienced team is here to support you—every step of the way.'}
                 title={<>Flexible NDIS Support, <br></br>Built Around You</>} 
                 />
-                    <section className="py-20 bg-gray-50">
+                    <section className="py-6 md:py-20 bg-gray-50">
                         <div className="container mx-auto px-5 lg:px-0">
                             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                                 {/* Sidebar */}

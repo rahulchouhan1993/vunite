@@ -85,8 +85,17 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(117.54deg, #228990 0%, #21AC96 100%);
 }
 
+.container { 
+  padding-left: 25px;
+  padding-right: 25px;
+}
 @media (max-width: 1199px) {
   .container { 
     max-width: 1140px;
   }
+}
+@media (max-width:776px) {
+ .heroimg {
+    object-position: 80%;
+}
 }
