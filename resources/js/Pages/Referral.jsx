@@ -1,7 +1,29 @@
+import MainLayout from '../Layout/MainLayout'
+import PageHeroSection from '../components/common/HeroSection'
+import ParticipantsFamiliesSection from '../components/referral/ParticipantsFamiliesSection'
+import ParticipantReferralFormCard from '../components/referral/ParticipantReferralFormCard'
+import CTABanner from '../components/home/CTABanner'
+import banner from '../assets/refferalbg.png'
+
 export default function Referral() {
-    return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-            <h1 className="text-4xl font-bold mb-4">Referral</h1>
-        </div>
-    );
+  return (
+    <MainLayout>
+      <div className="min-h-screen">
+        <PageHeroSection
+          banner={banner}
+          width="max-w-[600px]"
+          description="Our goal is to provide the right support, at the right time, in the right way."
+          title={
+            <>
+              Making Referrals Simple,
+              <br />
+              Respectful & Fast
+            </>
+          }
+        />
+        <ParticipantsFamiliesSection rightSlot={<ParticipantReferralFormCard />} />
+        <CTABanner />
+      </div>
+    </MainLayout>
+  )
 }

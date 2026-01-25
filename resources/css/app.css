@@ -46,10 +46,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @layer components{
-  .button { @apply px-6 py-[13px] cursor-pointer text-white font-semibold rounded-[30px] text-sm text-center}
+  .button { @apply  px-6 py-[13px] cursor-pointer text-white font-semibold rounded-[30px] text-sm text-center}
 }
 
+
+.btn-hover:hover, .bg-gr:hover{  
+  box-shadow: 0px 4px 10px 3px #0002;
+}
+.btn-hover { 
+  cursor: pointer;
+}
 .bg-gr {
+  cursor: pointer;
   background: linear-gradient(90deg, #ED695E 0%, #7C9686 100%);
 }
 
@@ -75,5 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .footerbg { 
   background: linear-gradient(117.54deg, #228990 0%, #21AC96 100%);
+}
 
+@media (max-width: 1199px) {
+  .container { 
+    max-width: 1140px;
+  }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/unitelogo.png'
+import { Link } from '@inertiajs/react';
 
 export const Footer = ({  contactInfo, quickLinks, services }) => {
   return (
@@ -19,13 +20,13 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
             <div>
               <h4 className="font-bold mb-6 text-xl">QUICK LINKS</h4>
               <ul className="space-y-3 text-sm opacity-90">
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- Our Services</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- Who We Help</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- About Us</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- Work with us</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- Make a referral</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- FAQs Us</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[16px]">- Register your interest</a></li>
+                <li><Link href="/services" className="hover:underline text-[15px] lg:text-[16px]">- Our Services</Link></li>
+                <li><Link href="/who-we-help" className="hover:underline text-[15px] lg:text-[16px]">- Who We Help</Link></li>
+                <li><Link href="/about" className="hover:underline text-[15px] lg:text-[16px]">- About Us</Link></li>
+                <li><Link href="/work-with-us" className="hover:underline text-[15px] lg:text-[16px]">- Work with us</Link></li>
+                <li><Link href="/referral" className="hover:underline text-[15px] lg:text-[16px]">- Make a referral</Link></li>
+                <li><Link href="/faq" className="hover:underline text-[15px] lg:text-[16px]">- FAQs</Link></li>
+                <li><Link href="/register-interest" className="hover:underline text-[15px] lg:text-[16px]">- Register your interest</Link></li>
               </ul>
             </div>
             <div>

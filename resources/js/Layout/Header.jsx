@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import logo from '../assets/unitelogo.png'
 export const Header = () => {
     const colors = {
@@ -11,15 +12,16 @@ export const Header = () => {
           <img src={logo} className='max-w-[180px]' />          
         </div>
         <nav className="hidden lg:flex gap-4 xl:gap-6 text-sm lg:text-normal xl:text-[16px] font-medium text-gray-500">
-          <a href="#" className="hover:text-teal-600">Home</a>
-          <a href="#" className="hover:text-teal-600">Services</a>
-          <a href="#" className="hover:text-teal-600">Who We Help</a>
-          <a href="#" className="hover:text-teal-600">About</a>
-          <a href="#" className="hover:text-teal-600">Participant</a>
-          <a href="#" className="hover:text-teal-600">Make Referral</a>
-          <a href="#" className="hover:text-teal-600">FAQs</a>
+          <Link href="/" className="hover:text-teal-600">Home</Link>
+          <Link href="/services" className="hover:text-teal-600">Services</Link>
+          <Link href="/participant" className="hover:text-teal-600">Participant</Link>
+          <Link href="/referral" className="hover:text-teal-600">Make Referral</Link>
+          <Link href="/contact-us" className="hover:text-teal-600">Contact Us</Link>
+          <Link href="/about" className="hover:text-teal-600">About Us</Link>
+          <Link href="/faq" className="hover:text-teal-600">FAQs</Link>
         </nav>
-        <button className={`button bg-gr`}>REGISTER YOUR INTEREST</button>
+        
+        <button className={`btn bg-gr text-white text-sm px-6 py-3  rounded-[30px]`}>REGISTER YOUR INTEREST</button>
     </header>
     </div>
   );
