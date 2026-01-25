@@ -2,7 +2,6 @@ import { CircleCheck } from 'lucide-react';
 import whychoose from '../../assets/whychoosebg.png';
  
 const WhyChooseUs = () => {
-  const colors = { primaryGreen: 'bg-[#2E8B83]' };
   const benefits = ['Nurse-led care approach', 'Family-owned & values-driven', 'Focus on dignity, safety & clinical oversight', 'Understanding of complex care needs'];
   return (
     <section className="relative py-24  ">

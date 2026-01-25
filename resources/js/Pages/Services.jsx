@@ -16,7 +16,7 @@ export default function Services() {
                 title={<>Flexible NDIS Support, <br></br>Built Around You</>} 
                 />
                     <section className="py-20 bg-gray-50">
-                        <div className="container mx-auto">
+                        <div className="container mx-auto px-5 lg:px-0">
                             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                                 {/* Sidebar */}
                                 <div className="lg:col-span-1">

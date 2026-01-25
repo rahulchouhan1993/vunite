@@ -122,7 +122,7 @@ export default function Contact() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="max-w-[400px] ms-auto relative rounded-[40px] overflow-hidden">
+              <div className="w-full max-w-full lg:max-w-[400px] lg:ms-auto relative rounded-[40px] overflow-hidden">
                 <img src={contactImage} alt="Caregiver supporting a participant" className="w-full h-full object-cover" />
                 <div className="absolute bottom-6 left-6 bg-white rounded-2xl p-4 shadow-sm">
                   <img src={logo} alt="V Unite" className="w-12 h-12" />

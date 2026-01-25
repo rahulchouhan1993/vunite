@@ -7,7 +7,7 @@ const HowItWorks = () => {
   return (
     <>
     <div className="relative bg-white relative py-20">
-      <div className="container m-auto">
+      <div className="container m-auto px-5 lg:px-0">
         <section className="realtive z-1 py-20 px-6 bg-white text-center rounded-[40px] shadow-[3px_3px_40px_rgba(0,0,0,0.1)] relative overflow-hidden">
           <h2 className="font-recoleta text-4xl font-bold text-main mb-16">How It Works</h2>
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-start gap-8 relative">

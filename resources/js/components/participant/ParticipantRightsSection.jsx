@@ -19,8 +19,8 @@ const ParticipantRightsSection = () => {
 
   return (
     <section className="py-20 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 items-center">
+      <div className="container mx-auto px-5 lg:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-28 items-center">
           {/* Left Column - Image */}
           <div className="relative">
             <div className="rounded-3xl flex items-center justify-center relative">
@@ -40,7 +40,7 @@ const ParticipantRightsSection = () => {
             <div className="space-y-4">
               {rights.map((right, index) => {
                 return (
-                  <div key={index} className=" mb-6 bg-gray-50 rounded-[20px] p-6 shadow-[2px_2px_40px_rgba(0,0,0,0.15)] transition-shadow duration-200">
+                  <div key={index} className="bg-gray-50 rounded-[20px] p-5 lg:p-6 shadow-[2px_2px_40px_rgba(0,0,0,0.15)] transition-shadow duration-200">
                     <div className="flex items-start">
                         <h3 className="text-lg font-bold text-main ">{right.title}</h3>
                     </div>
