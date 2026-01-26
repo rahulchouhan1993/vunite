@@ -2,7 +2,7 @@ import { CheckCircle } from 'lucide-react';
 import hero from '../../assets/hero.png';
 import ndis from '../../assets/wenidis.png';
 
-const HeroSection = () => {
+const HomeHeroSection = () => {
   return (
     <>
 
@@ -18,10 +18,10 @@ const HeroSection = () => {
             <section className="rounded-3xl sm:rounded-[50px] relative overflow-hidden w-full flex items-center min-h-[420px] sm:min-h-[520px]">
               <img src={hero} alt="Background" className="heroimg absolute top-0 left-0 w-full h-full object-cover" />
               <div className='clip-path-hero w-full h-full absolute top-0 left-0 '></div>
-              <div className="px-6 py-10 sm:px-10 sm:py-12 lg:px-[60px] lg:py-[60px] max-w-full sm:max-w-[600px] lg:max-w-[700px] w-full relative text-white">
+              <div className="px-6 py-10 sm:px-10 sm:py-12 lg:px-[60px] lg:py-[60px] max-w-full sm:max-w-[600px] lg:max-w-[800px] w-full relative text-white">
                 <p className="uppercase tracking-widest text-sm lg:text-normal mb-4">Welcome to V Unite</p>
-                <h1 className="font-recoleta text-[32px] leading-[40px] sm:text-4xl sm:leading-tight md:text-5xl font-bold mb-5 sm:mb-6">Supporting You to Live More Independently</h1>
-                <p className="mb-8 text-normal lg:text-[16px] opacity-90">Registered NDIS Provider offering personalised disability support services across South Australia.</p>
+                <h1 className="font-recoleta text-[32px] md:text-[48px] lg:text-[58px] leading-[40px]  sm:leading-tight md:text-5xl font-bold mb-5 sm:mb-6">Supporting You to Live More Independently</h1>
+                <p className="mb-8 text-normal md:text-[16px] lg:text-[20px] opacity-90">Registered NDIS Provider offering personalised disability support services across South Australia.</p>
                 <div className="space-y-3 mb-8">
                   {['Nurse-led care approach', 'NDIS Registered Provider', 'Qualified Support Workers', 'Person-Centred Care'].map((item, idx) => (
                     <div key={idx} className="text-sm md:text-normal lg:text-[16px] flex items-center gap-3">
@@ -31,7 +31,7 @@ const HeroSection = () => {
                   ))}
                 </div>
                 <button className="button !bg-white">
-                  <span className='text-gr'>GET SUPPORT</span>
+                  <span className='text-gr px-6'>GET SUPPORT</span>
                 </button>
               </div>
             </section>
@@ -44,4 +44,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HomeHeroSection;

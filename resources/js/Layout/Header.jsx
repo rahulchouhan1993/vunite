@@ -19,6 +19,11 @@ export const Header = () => {
     []
   )
 
+  const isActive = (href) => {
+    if (href === '/') return url === '/'
+    return url === href || url.startsWith(`${href}/`)
+  }
+
   useEffect(() => {
     setIsOpen(false)
   }, [url])
@@ -48,14 +53,16 @@ export const Header = () => {
           <img src={logo} className="max-w-[160px] lg:max-w-[180px]" alt="V UNITE" />
         </Link>
 
-        <nav className="hidden lg:flex gap-4 md:gap-2 xl:gap-6 text-sm md:text-[13px] xl:text-[16px] font-medium text-gray-500">
+        <nav className="hidden lg:flex gap-4 md:gap-2 xl:gap-6 text-sm md:text-[13px] xl:text-[15px] font-medium text-gray-500">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`hover:text-teal-600 ${url === l.href ? 'text-teal-700' : ''}`}
+              className={`hover:text-teal-600 pb-1  
+                `}
             >
               {l.label}
+              <div className={`${isActive(l.href) ? 'activeline' : ''} mt-2 h-[2px] w-full`}></div>
             </Link>
           ))}
         </nav>
@@ -104,7 +111,12 @@ export const Header = () => {
             <nav className="flex-1 overflow-y-auto px-5 py-4">
               <div className="flex flex-col gap-2 text-[15px] font-medium text-gray-800">
                 {links.map((l) => (
-                  <Link key={l.href} href={l.href} className="py-2" onClick={() => setIsOpen(false)}>
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className={`py-2 px-2 rounded-lg ${isActive(l.href) ? 'bg-[#E4EEED] text-teal-800' : ''}`}
+                    onClick={() => setIsOpen(false)}
+                  >
                     {l.label}
                   </Link>
                 ))}

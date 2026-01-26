@@ -84,18 +84,21 @@ h1, h2, h3, h4, h5, h6 {
 .footerbg { 
   background: linear-gradient(117.54deg, #228990 0%, #21AC96 100%);
 }
-
 .container { 
   padding-left: 25px;
   padding-right: 25px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1299px) {
   .container { 
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 @media (max-width:776px) {
- .heroimg {
+  .heroimg {
     object-position: 80%;
+  }
 }
+
+.activeline { 
+  background: linear-gradient(90deg, #ED695E 0%, #7C9686 50%, rgba(124, 150, 134, 0) 93.75%);
 }

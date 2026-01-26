@@ -2,14 +2,16 @@ import { Check } from 'lucide-react';
 import stroies from '../../assets/about-approch.png';
 
 const ApproachToCareSection = () => {
+  
   const bulletPoints = [
-    "Assist you with health concerns",
-    "Participate in regular activities", 
-    "Evidence-based interventions",
-    "Personalised Positive Behaviour Support Plans (PBSP)",
-    "Support to engage with routines and wellbeing",
-    "Goals-focused evaluation & coaching",
-    "Collaborative planning with your family, carers & support team",
+    "Adults with intellectual disability",
+    'Participants with mental health conditions',
+    'Participants with behaviours of concern',
+    'Participants requiring Positive Behaviour Support Plans (PBSP)',
+    'Participants with complex medical and nursing needs',
+    'Participants with medication complexity',
+    'Participants transitioning from hospital, mental health units, or aged care',
+    'Participants requiring high-intensity daily personal care'
   ];
 
   return (

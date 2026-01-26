@@ -10,7 +10,7 @@ const ParticipantRightsSection = () => {
       title: "Dignity and respect",
     },
     {
-      title: "Privacy and confidentiality",
+      title: <>Privacy and conf<span>identiality</span></>,
     },
     {
       title: "Safe, ethical, and transparent service delivery",

@@ -6,7 +6,7 @@ import CTABanner from '../components/home/CTABanner';
 import PageHeroSection from '../components/common/HeroSection';
 import AboutWhoWeAre from '../components/about/AboutWhoWeAre';
 import WhyChooseUs from '../components/home/WhyChooseUs';
-import hero from '../assets/abouthero.png';
+import hero from '../assets/aboutimg.png';
 
 export default function About() {
     return (

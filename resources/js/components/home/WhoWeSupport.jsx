@@ -6,8 +6,6 @@ import s3 from '../../assets/s3.png';
 import s2 from '../../assets/s2.png';
 
 const WhoWeSupport = () => {
-  
-  const colors = { accentRed: 'bg-[#D97768]' };
   const blocks = [
     { title: 'NDIS Participants', icon: s1, text: 'Tailored support based on your goals and needs. Tailored support based on your goals and needs. Tailored support based on.' },
     { title: 'Families & Carers', icon: s2, text: 'Reliable support you can trust. Support you can trust. Support reliable you can trust. You can trust. Reliable support you can trust.' },

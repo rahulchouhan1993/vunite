@@ -11,7 +11,7 @@ export default function Services() {
         <MainLayout>
             <div className="min-h-screen">
                 <PageHeroSection
-                banner={banner} width='max-w-[550px]'
+                banner={banner} width='max-w-[650px]'
                 description={'Whether you need everyday assistance or complex care, our experienced team is here to support you—every step of the way.'}
                 title={<>Flexible NDIS Support, <br></br>Built Around You</>} 
                 />

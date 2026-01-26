@@ -11,6 +11,7 @@ const ServicesGrid = () => {
     { title: 'Support Coordination', img: img, desc: 'Guidance to navigate and manage your NDIS plan.' },
     { title: 'NDIS Plan Support', img: img, desc: 'Comprehensive assistance across your NDIS journey.' },
     { title: 'Respite Support', img: img, desc: 'Trusted temporary care for families and carers.' },
+    { title: 'Transport Assistance', img: img, desc: 'Safe, reliable transport to appointments and activities.' },
     { title: 'Transport Assistance', img: img, desc: 'Safe, reliable transport to appointments and activities.' }
   ];
 
@@ -21,7 +22,7 @@ const ServicesGrid = () => {
         <h2 className="font-recoleta text-3xl lg:text-4xl  font-bold text-main mb-4">Our NDIS Services</h2>
         <p className="text-gray-500 text-sm xl:text-normal">We provide flexible and reliable NDIS services designed to support your independence and wellbeing.</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
         {cards.map((service, idx) => (
           <ServiceItem key={idx} service={service} idx={idx} />
         ))}

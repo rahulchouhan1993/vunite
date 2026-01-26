@@ -1,6 +1,6 @@
 import React from 'react';
 import { Play } from 'lucide-react';
-import stroies from '../../assets/hero.png';
+import stroies from '../../assets/real.png';
 import heart from '../../assets/heart-dark.png';
 
 const AboutWhoWeAre = () => {
@@ -22,9 +22,9 @@ const AboutWhoWeAre = () => {
           </div>
           <div className="w-full md:w-1/2 relative">
             <img src={stroies} alt="Video thumbnail" className="rounded-3xl !min-h-[380px] w-full object-cover shadow-lg" />
-            <button className="absolute inset-0 m-auto w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
+            {/* <button className="absolute inset-0 m-auto w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition">
               <Play className="ml-1" />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

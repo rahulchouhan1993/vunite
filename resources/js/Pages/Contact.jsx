@@ -26,11 +26,10 @@ export default function Contact() {
         <section className="container m-auto px-5 lg:px-0 pt-16 pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-7">
-              <div className="text-main text-[16px] font-semibold">Get in touch</div>
+              <div className="font-recoleta text-main text-[16px] md:text-[22px] font-bold">Get in touch</div>
               <h1 className="mt-2 text-[44px] leading-[48px] lg:text-[54px] lg:leading-[56px] font-bold text-pink">Contact us</h1>
               <p className="mt-4 text-[14px] lg:text-[15px] leading-relaxed text-gray-500 max-w-[540px]">
-                Have any questions? We’re here to help! Simply leave us a message using the form on the right, or give us
-                a call to speak to one of our friendly team members.
+               Have any questions? We’re here to help! Simply leave us a message using the form on the right, or give us a call to speak to one of our friendly team members.
               </p>
             </div>
 
@@ -51,14 +50,14 @@ export default function Contact() {
                   className="w-full bg-[#F4F6F7] rounded-full px-3 py-3 flex items-center gap-4 text-gray-700 hover:bg-[#EEF2F4]"
                 >
                   <span className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-pink" />
+                    <Mail className="w-5 h-5 text-main" />
                   </span>
                   <span className="text-[14px] font-semibold break-all">{contact.email}</span>
                 </a>
 
                 <Link
                   href="#"
-                  className="w-full h-[54px] rounded-full bg-gr text-white font-semibold text-[14px] flex items-center justify-center gap-3"
+                  className="w-full h-[60px] rounded-full bg-gr text-white font-semibold text-[14px] flex items-center justify-center gap-3"
                 >
                   <CalendarDays className="w-5 h-5" />
                   Make an Appointment

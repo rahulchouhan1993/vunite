@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react'
 export default function ParticipantReferralFormCard() {
   return (
     <div className="max-w-[500px] m-auto bg-[#F3F4F6] rounded-3xl p-8 shadow-sm">
-      <h3 className="text-[18px] font-bold text-gray-800">Participant Referral</h3>
+      <h3 className="text-[18px] md:text-[22px] font-bold text-gray-800">Participant Referral</h3>
 
       <form className="mt-6 space-y-4">
         <input className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]" placeholder="First Name of Referee" />

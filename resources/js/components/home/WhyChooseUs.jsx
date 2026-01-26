@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
                 <div className="rounded-full">
                   <CircleCheck />
                 </div>
-                <span className="font-medium text-lg">{item}</span>
+                <span className="font-medium text-[18px] md:text-[20px] lg:text-[22px]">{item}</span>
               </div>
             ))}
           </div>

@@ -6,28 +6,28 @@ const WhatMakesUsDifferentSection = () => {
     {
       icon: Users,
       title: "Experienced & Caring Team",
-      description: "Qualified professionals dedicated to person-centred care.",
+      description: "Our support workers are carefully selected, trained, and supported to deliver care that is both professional and compassionate.",
       iconColor: "text-teal-600",
       bgColor: "bg-teal-50"
     },
     {
       icon: Shield,
       title: "Consistency You Can Trust",
-      description: "Reliable supports with continuity.",
+      description: "We provide dedicated support teams wherever possible, helping participants build strong, familiar relationships over time.",
       iconColor: "text-coral-600",
       bgColor: "bg-coral-50"
     },
     {
       icon: Award,
       title: "Safety & Quality First",
-      description: "Best-practice standards and rigorous safeguards.",
+      description: "We follow all NDIS Quality and Safeguards Commission requirements and maintain strong systems to ensure safe, reliable services.",
       iconColor: "text-teal-600",
       bgColor: "bg-teal-50"
     },
     {
       icon: MessageCircle,
       title: "Clear Communication",
-      description: "Transparent updates and coordination across your providers.",
+      description: "We believe everyone involved should feel informed and confident. Families, carers, and coordinators are kept up to date through open and transparent communication.",
       iconColor: "text-coral-600",
       bgColor: "bg-coral-50"
     }
@@ -53,16 +53,11 @@ const WhatMakesUsDifferentSection = () => {
               return (
                 <div 
                   key={index} 
-                  className="bg-white rounded-[35px] p-8 shadow-[2px_2px_40px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-[30px] p-[20px] md:p-[35px] shadow-[2px_2px_40px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    {/* Icon */}
-                    <div className={`${card.bgColor} rounded-full p-4`}>
-                      <IconComponent className={`w-8 h-8 ${card.iconColor}`} />
-                    </div>
-                    
+                  <div className="flex flex-col items-center text-start space-y-4">
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-800">
+                    <h3 className="w-full text-xl font-bold text-black text-start">
                       {card.title}
                     </h3>
                     

@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../Layout/MainLayout';
-import HeroSection from '../components/home/HeroSection';
+import HomeHeroSection from '../components/home/HomeHeroSection';
 import ServicesGrid from '../components/home/ServicesGrid';
 import WhoWeSupport from '../components/home/WhoWeSupport';
 import RealStories from '../components/home/RealStories';
@@ -13,7 +13,7 @@ import CTABanner from '../components/home/CTABanner';
 const LandingPage = () => {
   return (
     <MainLayout>
-      <HeroSection />
+      <HomeHeroSection />
       <ServicesGrid />
       <WhoWeSupport />
       <RealStories />
