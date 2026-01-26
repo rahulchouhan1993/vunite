@@ -18,7 +18,7 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
                 <p className='mb-2'><span className="font-light">Email : </span> info@vunitesupportservices.com</p>
               </div>
             </div>
-            <div>
+            <div className='md:ps-[100px]'>
               <h4 className="font-bold mb-6 text-xl">QUICK LINKS</h4>
               <ul className="space-y-3 text-sm opacity-90">
                 <li><Link href="/services" className="hover:underline text-[15px] lg:text-[15px]">- Our Services</Link></li>
