@@ -4,7 +4,7 @@ import ServiceItem from './ServiceItem';
 
 const ServicesGrid = () => {
   const cards = [
-    { title: 'Daily Living Support', img: img, desc: 'Helping with personal care, meals, and everyday tasks.' },
+    { title: 'Daily Living Support', img: img, desc: ' Helping with personal care, meals, and everyday tasks. Helping with personal care, ' },
     { title: 'Help to Manage Daily Activities', img: img, desc: 'Support with household tasks and personal routines.' },
     { title: 'Community Participation', img: img, desc: 'Engage with community and social activities confidently.' },
     { title: 'Therapeutic Supports', img: img, desc: 'Professional therapy services to improve wellbeing.' },
@@ -28,7 +28,7 @@ const ServicesGrid = () => {
         ))}
       </div>
       <div className="text-center mt-6 md:mt-12">
-        <button className="button !bg-white text-sm border-gr px-12 py-3">
+        <button className="button btn-hover !bg-white text-sm border-gr px-12 py-3">
           <span className='text-gr uppercase'>View All Services</span>
         </button>
       </div>

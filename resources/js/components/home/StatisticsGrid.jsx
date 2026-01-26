@@ -29,7 +29,7 @@ const StatisticsGrid = () => {
                 ${idx % 2 === 0 ? 'bg-pink' : 'bg-main'}`}>
                   {feature.icon}
                 </div>
-              <h3 className="font-bold text-[21px] md:text-[23px] lg:text-[26px] text-black mb-2">{feature.title}</h3>
+              <h3 className="font-bold text-[21px] md:text-[23px] lg:text-[24px] text-black mb-2">{feature.title}</h3>
               <p className="text-[15px] lg:text-[16px] text-gray-500 leading-relaxed">{feature.desc}</p>
             </div>
           ))}

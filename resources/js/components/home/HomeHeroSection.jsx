@@ -30,7 +30,7 @@ const HomeHeroSection = () => {
                     </div>
                   ))}
                 </div>
-                <button className="button !bg-white">
+                <button className="button btn-hover !bg-white">
                   <span className='text-gr px-6'>GET SUPPORT</span>
                 </button>
               </div>

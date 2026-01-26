@@ -12,7 +12,7 @@ const CTABanner = () => {
           <p className="text-lg text-black mb-6  text-start max-w-sm">Discover why our clients trust us to provide exceptional care and support.</p>
           <div className="md:flex ">
             <button className={`w-full lg:w-auto mb-4 md:mb-0 button bg-gr me-4`}>CALL NOW</button>
-            <button className="w-full lg:w-auto button !bg-white">
+            <button className="w-full lg:w-auto button btn-hover !bg-white">
               <span className='text-gr'>GET SUPPORT</span>
             </button>
           </div>
