@@ -36,8 +36,8 @@ const HomeHeroSection = () => {
               </div>
             </section>
         </div>
-        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10">
-            <img className="w-[120px] sm:w-[160px] lg:w-[190px]" src={ndis} alt="NDIS" />
+        <div className="absolute bottom-2 right-7 sm:bottom-2 sm:right-5 z-10">
+            <img className="w-[80px] sm:w-[150px] lg:w-[190px]" src={ndis} alt="NDIS" />
         </div>
       </div>
     </>
