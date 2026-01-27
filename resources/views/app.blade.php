@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
          @vite('resources/css/app.css')
         @viteReactRefresh
+        @routes
         @vite('resources/js/app.jsx')
         @inertiaHead
     </head>

@@ -4,11 +4,12 @@ import { CalendarDays, Mail, Phone } from 'lucide-react'
 import MainLayout from '../Layout/MainLayout'
 import contactImage from '../assets/contact.png'
 import logo from '../assets/siteicon.png'
+import { router } from '@inertiajs/react'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
-
+ 
   const contact = useMemo(
     () => ({
       phoneDisplay: '+61 449 799 946',
@@ -77,34 +78,44 @@ export default function Contact() {
                   onSubmit={(e) => {
                     e.preventDefault()
                     if (!canSubmit) return
-                    setSubmitted(true)
-                    setTimeout(() => setSubmitted(false), 2500)
-                    setForm({ name: '', phone: '', email: '', message: '' })
+
+                    router.post(route('contact'), form, {
+                      onSuccess: () => {
+                        setSubmitted(true)
+                        setTimeout(() => setSubmitted(false), 2500)
+                        setForm({ name: '', phone: '', email: '', message: '' })
+                      },
+                    })
                   }}
+                  method='post'
                 >
                   <input
                     value={form.name}
                     onChange={(e) => setForm((s) => ({ ...s, name: e.target.value }))}
                     className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]"
                     placeholder="Name"
+                    name="name"
                   />
                   <input
                     value={form.phone}
                     onChange={(e) => setForm((s) => ({ ...s, phone: e.target.value }))}
                     className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]"
                     placeholder="Phone"
+                    name="phone"
                   />
                   <input
                     value={form.email}
                     onChange={(e) => setForm((s) => ({ ...s, email: e.target.value }))}
                     className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]"
                     placeholder="Email"
+                    name="email"
                   />
                   <textarea
                     value={form.message}
                     onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
                     className="w-full bg-white rounded-[22px] border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75] min-h-[120px] resize-none"
                     placeholder="Message"
+                    name="message"
                   />
 
                   <button
