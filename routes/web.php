@@ -29,14 +29,13 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
             'first_name'  => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'referee_email' => 'required|email|max:255',
-            'referee_contact' => 'nullable|string|max:20',
+            'referee_contact' => 'nullable|digits_between:10,13',
             'referee_position' => 'nullable|string|max:100',
             'referee_purpose' => 'nullable|string|max:255',
             'service' => 'nullable|string|max:100',
         ]);
 
         Referral::create($validated);
-
         return back()->with('success', 'Referral submitted successfully!');
     }
 
@@ -51,12 +50,11 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
         $validated = $request->validate([
             'name'    => 'required|string|max:255',
             'email'   => 'required|email|max:255',
-            'phone' => 'nullable',
+            'phone' => 'nullable|digits_between:10,13',
             'message' => 'required|string',
         ]);
 
         ContactMessage::create($validated);
-
         return back()->with('success', 'Message sent successfully!');
     }
 

@@ -1,14 +1,21 @@
 import { useMemo, useState } from 'react'
-import { Link } from '@inertiajs/react'
+import { Link, useForm } from '@inertiajs/react'
 import { CalendarDays, Mail, Phone } from 'lucide-react'
 import MainLayout from '../Layout/MainLayout'
 import contactImage from '../assets/contact.png'
 import logo from '../assets/siteicon.png'
-import { router } from '@inertiajs/react'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const [touched, setTouched] = useState({ name: false, phone: false, email: false, message: false })
+
+  const { data, setData, post, processing, errors, clearErrors, reset } = useForm({
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+  })
  
   const contact = useMemo(
     () => ({
@@ -19,7 +26,26 @@ export default function Contact() {
     []
   )
 
-  const canSubmit = form.name.trim() && form.email.trim() && form.message.trim()
+  const clientErrors = useMemo(() => {
+    const next = {}
+
+    if (!data.name.trim()) next.name = 'Name is required.'
+
+    const email = data.email.trim()
+    if (!email) next.email = 'Email is required.'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = 'Enter a valid email address.'
+
+    if (data.phone.trim()) {
+      if (!/^\d+$/.test(data.phone)) next.phone = 'Phone number must contain digits only.'
+      else if (data.phone.length < 10 || data.phone.length > 13) next.phone = 'Phone number must be 10 to 13 digits.'
+    }
+
+    if (!data.message.trim()) next.message = 'Message is required.'
+
+    return next
+  }, [data])
+
+  const canSubmit = Object.keys(clientErrors).length === 0
 
   return (
     <MainLayout>
@@ -77,55 +103,106 @@ export default function Contact() {
                   className="mt-6 space-y-4"
                   onSubmit={(e) => {
                     e.preventDefault()
-                    if (!canSubmit) return
+                    setTouched({ name: true, phone: true, email: true, message: true })
+                    setSubmitError('')
+                    if (!canSubmit) {
+                      setSubmitError('Please fix the highlighted fields and try again.')
+                      return
+                    }
+                    const contactUrl = typeof route === 'function' ? route('contact') : '/contact-us'
 
-                    router.post(route('contact'), form, {
+                    post(contactUrl, {
+                      preserveScroll: true,
+                      preserveState: true,
                       onSuccess: () => {
                         setSubmitted(true)
                         setTimeout(() => setSubmitted(false), 2500)
-                        setForm({ name: '', phone: '', email: '', message: '' })
+                        setTouched({ name: false, phone: false, email: false, message: false })
+                        setSubmitError('')
+                        reset()
+                      },
+                      onError: () => {
+                        setSubmitError('Please review the highlighted fields and try again.')
                       },
                     })
                   }}
                   method='post'
                 >
                   <input
-                    value={form.name}
-                    onChange={(e) => setForm((s) => ({ ...s, name: e.target.value }))}
+                    value={data.name}
+                    onBlur={() => setTouched((s) => ({ ...s, name: true }))}
+                    onChange={(e) => {
+                      setData('name', e.target.value)
+                      setSubmitError('')
+                      clearErrors('name')
+                    }}
                     className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]"
                     placeholder="Name"
                     name="name"
                   />
+                  {(touched.name && (clientErrors.name || errors.name)) && (
+                    <div className="text-[12px] text-red-600 font-medium">{clientErrors.name || errors.name}</div>
+                  )}
                   <input
-                    value={form.phone}
-                    onChange={(e) => setForm((s) => ({ ...s, phone: e.target.value }))}
+                    value={data.phone}
+                    onBlur={() => setTouched((s) => ({ ...s, phone: true }))}
+                    onChange={(e) => {
+                      setData('phone', e.target.value.replace(/\D/g, ''))
+                      setSubmitError('')
+                      clearErrors('phone')
+                    }}
+                    inputMode="numeric"
+                    pattern="[0-9]*"
                     className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]"
                     placeholder="Phone"
                     name="phone"
                   />
+                  {(touched.phone && (clientErrors.phone || errors.phone)) && (
+                    <div className="text-[12px] text-red-600 font-medium">{clientErrors.phone || errors.phone}</div>
+                  )}
                   <input
-                    value={form.email}
-                    onChange={(e) => setForm((s) => ({ ...s, email: e.target.value }))}
+                    value={data.email}
+                    onBlur={() => setTouched((s) => ({ ...s, email: true }))}
+                    onChange={(e) => {
+                      setData('email', e.target.value)
+                      setSubmitError('')
+                      clearErrors('email')
+                    }}
                     className="w-full bg-white rounded-full border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75]"
                     placeholder="Email"
                     name="email"
                   />
+                  {(touched.email && (clientErrors.email || errors.email)) && (
+                    <div className="text-[12px] text-red-600 font-medium">{clientErrors.email || errors.email}</div>
+                  )}
                   <textarea
-                    value={form.message}
-                    onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
+                    value={data.message}
+                    onBlur={() => setTouched((s) => ({ ...s, message: true }))}
+                    onChange={(e) => {
+                      setData('message', e.target.value)
+                      setSubmitError('')
+                      clearErrors('message')
+                    }}
                     className="w-full bg-white rounded-[22px] border border-gray-200 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-[#0F6F75] min-h-[120px] resize-none"
                     placeholder="Message"
                     name="message"
                   />
+                  {(touched.message && (clientErrors.message || errors.message)) && (
+                    <div className="text-[12px] text-red-600 font-medium">{clientErrors.message || errors.message}</div>
+                  )}
 
                   <button
                     type="submit"
-                    disabled={!canSubmit}
+                    disabled={!canSubmit || processing}
                     className={`w-full h-[44px] rounded-full bg-gr text-white font-semibold text-[13px] disabled:opacity-60 disabled:cursor-not-allowed`}
                   >
-                    SEND NOW
+                    <span className="inline-flex items-center justify-center gap-2">
+                      {processing && <span className="w-4 h-4 rounded-full border-2 border-white/40 border-t-white animate-spin" />}
+                      {processing ? 'SENDING…' : 'SEND NOW'}
+                    </span>
                   </button>
 
+                  {submitError && <div className="text-[13px] text-red-700 font-semibold">{submitError}</div>}
                   {submitted && <div className="text-[13px] text-main font-semibold">Message sent. We’ll be in touch soon.</div>}
                 </form>
               </div>

@@ -23,7 +23,7 @@ const PageHeroSection = ({ width, banner, link, title, description }) => {
                 
                 {link && 
                 <div>
-                  <Link href={link} className="block sm:w-fit mt-12 button !bg-white">
+                  <Link href={link} className="block sm:w-fit mt-12 button btn-hover !bg-white">
                     <span className='text-gray-800 text-gr'>GET SUPPORT</span>
                   </Link>
                 </div>
