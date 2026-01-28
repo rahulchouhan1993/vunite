@@ -53,12 +53,12 @@ export const Header = () => {
           <img src={logo} className="max-w-[160px] lg:max-w-[180px]" alt="V UNITE" />
         </Link>
 
-        <nav className="hidden lg:flex gap-4 md:gap-2 xl:gap-6 text-sm md:text-[13px] xl:text-[15px] font-medium text-gray-500">
+        <nav className="relative hidden lg:flex gap-4 md:gap-2 xl:gap-6 text-sm md:text-[13px] xl:text-[15px] font-medium text-gray-500 top-[6px]">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`hover:text-teal-600 pb-1  
+              className={`hover:text-teal-600   
                 `}
             >
               {l.label}
@@ -95,7 +95,7 @@ export const Header = () => {
           role="dialog"
           aria-modal="true"
         >
-          <div className="h-full flex flex-col">
+          <div className="h-full flex flex-col items-center">
             <div className="px-5 py-4 flex items-center justify-between border-b border-gray-100">
               <img src={logo} className="max-w-[140px]" alt="V UNITE" />
               <button
@@ -108,7 +108,7 @@ export const Header = () => {
               </button>
             </div>
 
-            <nav className="flex-1 overflow-y-auto px-5 py-4">
+            <nav className="flex-1  overflow-y-auto px-5 py-4">
               <div className="flex flex-col gap-2 text-[15px] font-medium text-gray-800">
                 {links.map((l) => (
                   <Link

@@ -21,7 +21,7 @@ export default function Contact() {
     () => ({
       phoneDisplay: '+61 449 799 946',
       phoneTel: '+61449799946',
-      email: 'info@vunitesupportservices.com',
+      email: 'info@vunitesupportservices.com.au',
     }),
     []
   )

@@ -15,18 +15,21 @@ const WhoWeSupport = () => {
   return (
     <>
     <div className='container m-auto'>
-      <section className="px-4 md:px-12 rounded-[30px] overflow-hidden pt-8 pb-6  md:pt-16 md:pb-16  bg-gray-700 relative">
-        <img src={wesupport} alt="bg" className="absolute top-0 left-0 w-full h-full object-cover" />
-        <div className='clip-path-hero w-full h-full absolute top-0 left-0 '></div>
+      <section className="px-4 md:px-12 rounded-[30px]  pt-8 pb-6  md:pt-16 md:pb-16  bg-gray-700 relative">
+
+       <div className='overflow-hidden rounded-[30px]'>
+        <img src={wesupport} alt="bg" className=" absolute top-0 left-0 w-full h-full object-cover" />
+        <div className='rounded-[30px] clip-path-hero w-full h-full absolute top-0 left-0 '></div>
+        </div> 
 
         <div className="relative md:px-8">
           <h2 className="text-center text-white text-3xl font-recoleta font-bold mb-8">Who We Support</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 ">
             {blocks.map((item, idx) => (
               <div key={idx} className="bg-white rounded-[30px] p-4 md:p-6 lg:p-12 text-start shadow-xl">
-                <img src={item.icon} alt={item.title} className=" max-w-[70px] md:max-w-[100px] mt-3 mb-2 md:mb-6 lg:mb-6 " />
-                <h3 className="text-xl lg:text-2xl font-bold text-main mb-4 pt-6">{item.title}</h3>
-                <p className="text-gray-500 text-normal lg:text-[15px] leading-relaxed">{item.text}</p>
+                <img src={item.icon} alt={item.title} className=" fading max-w-[70px] md:max-w-[100px] mt-3 mb-2 md:mb-6 lg:mb-6 " />
+                <h3 className="fading text-xl lg:text-2xl font-bold text-main mb-4 pt-6">{item.title}</h3>
+                <p className="fading text-gray-500 text-normal lg:text-[15px] leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>

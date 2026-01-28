@@ -34,7 +34,7 @@ const WhatMakesUsDifferentSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-20 lg:py-24 bg-white relative ">
       {/* Center icon/graphic decoration */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5">
         <div className="w-32 h-32 bg-teal-200 rounded-full blur-3xl"></div>
@@ -57,12 +57,12 @@ const WhatMakesUsDifferentSection = () => {
                 >
                   <div className="flex flex-col items-center text-start space-y-4">
                     {/* Title */}
-                    <h3 className="w-full text-xl font-bold text-black text-start">
+                    <h3 className="fading w-full text-xl font-bold text-black text-start">
                       {card.title}
                     </h3>
                     
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="fading text-gray-600 leading-relaxed">
                       {card.description}
                     </p>
                   </div>

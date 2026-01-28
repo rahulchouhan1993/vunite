@@ -13,13 +13,13 @@ const RealStories = () => {
           </button>
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="font-recoleta text-4xl font-bold text-main mb-2">Real Stories.</h2>
-          <h2 className="font-recoleta text-4xl font-bold text-pink mb-6">Real Support.</h2>
-          <p className="text-gray-800 text-xl mb-4">See how we support NDIS participants to live more confidently and independently every day.</p>
-          <p className="text-gray-600 font-light mb-2 text-normal md:text-lg leading-relaxed">
+          <h2 className="fading font-recoleta text-4xl font-bold text-main mb-2">Real Stories.</h2>
+          <h2 className="fading font-recoleta text-4xl font-bold text-pink mb-6">Real Support.</h2>
+          <p className="fading text-gray-800 text-xl mb-4">See how we support NDIS participants to live more confidently and independently every day.</p>
+          <p className="fading text-gray-600 font-light mb-2 text-normal md:text-lg leading-relaxed">
             We believe every person deserves respectful, reliable, and personalised support.
           </p>
-          <p className="text-gray-600 mb-2 font-light text-normal md:text-lg leading-relaxed">
+          <p className="fading text-gray-600 mb-2 font-light text-normal md:text-lg leading-relaxed">
             This short video shows how our team works closely with participants and families to create meaningful outcomes.
           </p>
         </div>

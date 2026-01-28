@@ -23,7 +23,7 @@ function AccordionItem({ index, isOpen, onToggle, question, answer }) {
   }, [isOpen])
 
   return (
-    <div className="bg-[#F3F4F6] rounded-2xl mb-6">
+    <div className="fading bg-[#F3F4F6] rounded-2xl mb-6">
       <button
         type="button"
         className="w-full flex items-start justify-between gap-4 px-6 py-4 text-left"

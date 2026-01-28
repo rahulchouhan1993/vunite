@@ -10,7 +10,7 @@ const ParticipantRightsSection = () => {
       title: "Dignity and respect",
     },
     {
-      title: <>Privacy and conf<span>identiality</span></>,
+      title: <>Privacy and conf <span className='ms-[-2px]'>identiality</span> </>,
     },
     {
       title: "Safe, ethical, and transparent service delivery",
@@ -40,9 +40,9 @@ const ParticipantRightsSection = () => {
             <div className="space-y-4">
               {rights.map((right, index) => {
                 return (
-                  <div key={index} className="bg-gray-50 rounded-[20px] p-5 lg:p-6 shadow-[2px_2px_40px_rgba(0,0,0,0.15)] transition-shadow duration-200">
+                  <div key={index} className="fading bg-gray-50 rounded-[20px] p-5 lg:p-6 shadow-[2px_2px_40px_rgba(0,0,0,0.15)] transition-shadow duration-200">
                     <div className="flex items-start">
-                        <h3 className="text-lg font-bold text-main ">{right.title}</h3>
+                        <p className="text-lg font-[600] text-main ">{right.title}</p>
                     </div>
                   </div>
                 );

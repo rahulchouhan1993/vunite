@@ -8,37 +8,37 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
       <footer className={`footerbg text-white pt-8 pb-4 md:pt-20 md:pb-10`}>
           <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
             <div>
-              <div className="bg-white w-fit p-1 rounded-[20px] mb-6">
-                <img src={logo} className='max-w-[120px]' />          
+              <div className="bg-white w-fit p-3 rounded-[20px] mb-6">
+                <img src={logo} className='max-w-[100px]' />          
               </div>
               <div className="text-[15px] lg:text-[15px] space-y-2 opacity-90">
                 <p className='mb-2'><span className="font-light">Founder : </span> Yuvraj Dhingra</p>
                 <p className='mb-2'><span className="font-light">Address : </span> 68 Hanorah Avenue, Virginia, 5120</p>
                 <p className='mb-2'><span className="font-light">Contact no : </span> +61 449 799 946</p>
-                <p className='mb-2'><span className="font-light">Email : </span> info@vunitesupportservices.com</p>
+                <p className='mb-2'><span className="font-light">Email : </span> info@vunitesupportservices.com.au</p>
               </div>
             </div>
             <div className='md:ps-[100px]'>
               <h4 className="font-bold mb-6 text-xl">QUICK LINKS</h4>
               <ul className="space-y-3 text-sm opacity-90">
-                <li><Link href="/services" className="hover:underline text-[15px] lg:text-[15px]">- Our Services</Link></li>
-                <li><Link href="/who-we-help" className="hover:underline text-[15px] lg:text-[15px]">- Who We Help</Link></li>
-                <li><Link href="/about" className="hover:underline text-[15px] lg:text-[15px]">- About Us</Link></li>
-                <li><Link href="/work-with-us" className="hover:underline text-[15px] lg:text-[15px]">- Work with us</Link></li>
-                <li><Link href="/referral" className="hover:underline text-[15px] lg:text-[15px]">- Make a referral</Link></li>
-                <li><Link href="/faq" className="hover:underline text-[15px] lg:text-[15px]">- FAQs</Link></li>
-                <li><Link href="/register-interest" className="hover:underline text-[15px] lg:text-[15px]">- Register your interest</Link></li>
+                <li><Link href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Our Services</Link></li>
+                <li><Link href="/who-we-help" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Who We Help</Link></li>
+                <li><Link href="/about" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- About Us</Link></li>
+                <li><Link href="/work-with-us" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Work with us</Link></li>
+                <li><Link href="/referral" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Make a referral</Link></li>
+                <li><Link href="/faq" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- FAQs</Link></li>
+                <li><Link href="/register-interest" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Register your interest</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-6 text-xl">SERVICES</h4>
               <ul className="space-y-3 text-sm opacity-90">
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[15px]">Support Worker Services</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[15px]">Community Nursing</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[15px]">Supported Independent Living</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[15px]">Specialised Disability Accommodation</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[15px]">Complex Hospital Discharge Planning</a></li>
-                <li><a href="#" className="hover:underline text-[15px] lg:text-[15px]">Veteran Community Nursing</a></li>
+                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Support Worker Services</a></li>
+                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Community Nursing</a></li>
+                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Supported Independent Living</a></li>
+                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Specialised Disability Accommodation</a></li>
+                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Complex Hospital Discharge Planning</a></li>
+                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Veteran Community Nursing</a></li>
               </ul>
             </div>
           </div>

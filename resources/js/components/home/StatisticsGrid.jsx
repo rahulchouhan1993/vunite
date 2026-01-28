@@ -1,14 +1,21 @@
 import heart from '../../assets/heart.png';
+import t1 from '../../assets/trust1.png';
+import t6 from '../../assets/trust6.png';
+import t5 from '../../assets/trust5.png';
+import t4 from '../../assets/trust4.png';
+import t3 from '../../assets/trust3.png';
+import t2 from '../../assets/trust2.png';
+
 import { Activity, Users, Clock, DollarSign, ShieldCheck, MessageCircle } from 'lucide-react';
 
 const StatisticsGrid = () => {
   const features = [
-    { title: 'Complex Care Specialists', desc:"Your wellbeing always comes first. Our experienced and specially trained team is equipped to support complex needs with care, consistency, and professionalism—ensuring your support is always reliable and responsive.", icon: <Activity size={36} /> },
-    { title: 'Dedicated Support Teams', desc:"You are supported by a consistent team who takes the time to know you. This continuity allows strong relationships to form, helping you feel comfortable, respected, and supported with dignity.", icon: <Users size={36} /> },
-    { title: '24/7 Reliable Support', desc:"Support should never stop when you need it most. Our team is available 24 hours a day, 7 days a week, so you’re never alone and help is always within reach.", icon: <Clock  size={36}/> },
-    { title: 'Transparent Pricing', desc:"We believe in honesty and clarity. You are only charged for the services you book—never for travel, mileage, or additional communication.", icon: <DollarSign size={36} /> },
-    { title: 'Holistic Risk & Wellbeing', desc:"Safety is more than a checklist. Our proactive risk assessments focus on the whole person, ensuring physical, emotional, and environmental wellbeing are always prioritised.", icon: <ShieldCheck size={36} /> },
-    { title: 'Clear & Seamless Communication', desc:"Families and loved ones are part of the journey. We make communication simple and transparent, keeping everyone informed, involved, and confident in the care being provided.", icon: <MessageCircle size={36} /> }
+    { title: 'Complex Care Specialists', desc:"Your wellbeing always comes first. Our experienced and specially trained team is equipped to support complex needs with care, consistency, and professionalism—ensuring your support is always reliable and responsive.", icon: t1 },
+    { title: 'Dedicated Support Teams', desc:"You are supported by a consistent team who takes the time to know you. This continuity allows strong relationships to form, helping you feel comfortable, respected, and supported with dignity.", icon: t2 },
+    { title: '24/7 Reliable Support', desc:"Support should never stop when you need it most. Our team is available 24 hours a day, 7 days a week, so you’re never alone and help is always within reach.", icon: t3 },
+    { title: 'Transparent Pricing', desc:"We believe in honesty and clarity. You are only charged for the services you book—never for travel, mileage, or additional communication.", icon: t4 },
+    { title: 'Holistic Risk & Wellbeing', desc:"Safety is more than a checklist. Our proactive risk assessments focus on the whole person, ensuring physical, emotional, and environmental wellbeing are always prioritised.", icon: t5 },
+    { title: 'Clear & Seamless Communication', desc:"Families and loved ones are part of the journey. We make communication simple and transparent, keeping everyone informed, involved, and confident in the care being provided.", icon: t6 }
   ];
 
   return (
@@ -23,11 +30,10 @@ const StatisticsGrid = () => {
         <p className="text-start text-[18px] font-light text-gray-500 ">At V Unite, we deliver high-quality, personalised NDIS support for people with complex and everyday needs. Regardless of the level of care required, our team is trained to create a safe, supportive environment that helps participants maintain healthy routines, build independence, and feel confident in their daily lives.</p>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-x-8 gap-y-12">
           {features.map((feature, idx) => (
-            <div key={idx} className="flex flex-col items-start">
+            <div key={idx} className="fading flex flex-col items-start">
               <div className={`w-20 h-20 rounded-[14px] flex  
-                items-center justify-center mb-4 text-white
-                ${idx % 2 === 0 ? 'bg-pink' : 'bg-main'}`}>
-                  {feature.icon}
+                items-center justify-center mb-4 text-white `}>
+                  <img src={feature.icon} alt={feature.title} className="w-full h-full object-contain" />
                 </div>
               <h3 className="font-bold text-[21px] md:text-[23px] lg:text-[24px] text-black mb-2">{feature.title}</h3>
               <p className="text-[15px] lg:text-[16px] text-gray-500 leading-relaxed">{feature.desc}</p>

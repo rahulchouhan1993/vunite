@@ -12,11 +12,11 @@ const AboutWhoWeAre = () => {
       <section className="relative z-1 py-20 container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
-            <h2 className="font-recoleta text-4xl font-bold text-main mb-2">Who We Are</h2>
-            <p className="text-gray-600 my-6 text-normal md:text-lg leading-relaxed">
+            <h2 className="fading font-recoleta text-4xl font-bold text-main mb-2">Who We Are</h2>
+            <p className="fading text-gray-600 my-6 text-normal md:text-lg leading-relaxed">
               V Unite Support Services Pty Ltd is a disability support provider delivering NDIS-aligned services across community, home, and supported living environments.
             </p>
-            <p className="text-main mb-2 text-normal md:text-lg leading-relaxed">
+            <p className="fading text-main mb-2 text-normal md:text-lg leading-relaxed">
               Our organisation is led by healthcare professionals with extensive experience in clinical coordination, risk management, and person-centred care.
             </p>
           </div>

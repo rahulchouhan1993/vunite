@@ -1,18 +1,20 @@
 import React from 'react';
-import img from '../../assets/service.png';
+import ser6 from '../../assets/service/6.png';
+import ser5 from '../../assets/service/5.png';
+import ser4 from '../../assets/service/4.png';
+import ser3 from '../../assets/service/3.png';
+import ser2 from '../../assets/service/2.png';
+import ser1 from '../../assets/service/1.png';
 import ServiceItem from './ServiceItem';
 
 const ServicesGrid = () => {
   const cards = [
-    { title: 'Daily Living Support', img: img, desc: ' Helping with personal care, meals, and everyday tasks. Helping with personal care, ' },
-    { title: 'Help to Manage Daily Activities', img: img, desc: 'Support with household tasks and personal routines.' },
-    { title: 'Community Participation', img: img, desc: 'Engage with community and social activities confidently.' },
-    { title: 'Therapeutic Supports', img: img, desc: 'Professional therapy services to improve wellbeing.' },
-    { title: 'Support Coordination', img: img, desc: 'Guidance to navigate and manage your NDIS plan.' },
-    { title: 'NDIS Plan Support', img: img, desc: 'Comprehensive assistance across your NDIS journey.' },
-    { title: 'Respite Support', img: img, desc: 'Trusted temporary care for families and carers.' },
-    { title: 'Transport Assistance', img: img, desc: 'Safe, reliable transport to appointments and activities.' },
-    { title: 'Transport Assistance', img: img, desc: 'Safe, reliable transport to appointments and activities.' }
+    { title: 'Daily Living Support', img: ser1, desc: ' Helping with personal care, meals, and everyday tasks. Helping with personal care, ' },
+    { title: 'Help to Manage Daily Activities', img: ser2, desc: 'Support with household tasks and personal routines.' },
+    { title: 'Community Participation', img: ser3, desc: 'Engage with community and social activities confidently.' },
+    { title: 'Therapeutic Supports', img: ser4, desc: 'Professional therapy services to improve wellbeing.' },
+    { title: 'Support Coordination', img: ser5, desc: 'Guidance to navigate and manage your NDIS plan.' },
+    { title: 'NDIS Plan Support', img: ser6, desc: 'Comprehensive assistance across your NDIS journey.' },
   ];
 
   return (

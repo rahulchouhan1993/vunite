@@ -31,7 +31,7 @@ const ParticipantSafeguardingSection = () => {
             <div className="space-y-0">
               {safeguardingItems.map((right, index) => {
                 return (
-                  <div key={index} className={`p-5 lg:p-6 ${safeguardingItems.length === index + 1 ? "" : "border-b border-gray-200"} transition-shadow duration-200`}>
+                  <div key={index} className={`fading p-5 lg:p-6 ${safeguardingItems.length === index + 1 ? "" : "border-b border-gray-200"} transition-shadow duration-200`}>
                     <div className="flex items-start">
                         <h3 className="text-lg font-bold text-black ">{right.title}</h3>
                     </div>
