@@ -9,7 +9,7 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
           <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
             <div>
               <div className="bg-white w-fit p-3 rounded-[20px] mb-6">
-                <img src={logo} className='max-w-[100px]' />          
+                <img src={logo} className='w-full max-w-[80px]' />          
               </div>
               <div className="text-[15px] lg:text-[15px] space-y-2 opacity-90">
                 <p className='mb-2'><span className="font-light">Founder : </span> Yuvraj Dhingra</p>

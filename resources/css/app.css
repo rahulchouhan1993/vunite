@@ -9,7 +9,9 @@
 @source '../**/*.tsx';
 
 
-
+body { 
+  background: #ffffff;
+}
 @keyframes fading-effect {
   from {
     opacity: 0;

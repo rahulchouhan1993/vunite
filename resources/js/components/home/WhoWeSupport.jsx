@@ -18,9 +18,9 @@ const WhoWeSupport = () => {
       <section className="px-4 md:px-12 rounded-[30px]  pt-8 pb-6  md:pt-16 md:pb-16  bg-gray-700 relative">
 
        <div className='overflow-hidden rounded-[30px]'>
-        <img src={wesupport} alt="bg" className=" absolute top-0 left-0 w-full h-full object-cover" />
+        <img src={wesupport} alt="bg" className="rounded-[30px] absolute top-0 left-0 w-full h-full object-cover" />
         <div className='rounded-[30px] clip-path-hero w-full h-full absolute top-0 left-0 '></div>
-        </div> 
+      </div> 
 
         <div className="relative md:px-8">
           <h2 className="text-center text-white text-3xl font-recoleta font-bold mb-8">Who We Support</h2>
