@@ -22,6 +22,14 @@ Route::get('/participant', function () {
     return inertia('Participant');
 });
 
+Route::get('/terms-condition', function () {
+    return inertia('Terms');
+});
+
+Route::get('/privacy-policy', function () {
+    return inertia('Privacy');
+});
+
 Route::match(['get', 'post'], '/referral', function (Request $request) {
 
     if ($request->isMethod('post')) {
