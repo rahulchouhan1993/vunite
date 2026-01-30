@@ -14,7 +14,7 @@ export default function About() {
             <div className="min-h-screen">
                 <PageHeroSection 
                 banner={hero}
-                    link='/'
+                    link='/contact-us'
                     title='Supporting People, Not Just Plans'
                     description='We don’t believe in one-size-fits-all solutions. Every person we support is different—and so is the care we provide.'
                  />

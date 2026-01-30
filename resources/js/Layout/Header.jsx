@@ -78,7 +78,9 @@ export const Header = () => {
             {isOpen ? <X size={20} /> : <Menu className='text-main' size={30} />}
           </button>
 
-          <button className="hidden lg:inline-flex btn bg-gr text-white text-sm px-6 py-3 rounded-[30px]">REGISTER YOUR INTEREST</button>
+          <Link href="/contact-us" className="hidden lg:inline-flex btn bg-gr text-white text-sm px-6 py-3 rounded-[30px]">
+            REGISTER YOUR INTEREST
+          </Link>
         </div>
       </header>
 
@@ -124,7 +126,13 @@ export const Header = () => {
             </nav>
 
             <div className="px-5 py-4 border-t border-gray-100">
-              <button className="w-full btn bg-gr text-white text-sm px-6 py-3 rounded-[30px]">REGISTER YOUR INTEREST</button>
+              <Link
+                href="/contact-us"
+                className="w-full btn bg-gr text-white text-sm px-6 py-3 rounded-[30px] text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                REGISTER YOUR INTEREST
+              </Link>
             </div>
           </div>
         </aside>

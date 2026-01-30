@@ -20,10 +20,9 @@ const PageHeroSection = ({ width, banner, link, title, description }) => {
               <div>
                 <h1 className="font-recoleta text-[32px] md:text-[48px] lg:text-[58px]  font-bold mb-6 leading-tight">{title}</h1>
                 <p className=" text-normal md:text-[16px] lg:text-[18px] opacity-90">{description}</p>
-                
                 {link && 
                 <div>
-                  <Link href={link} className="block sm:w-fit mt-12 button btn-hover !bg-white">
+                  <Link href={link || '/contact-us'} className="block sm:w-fit mt-12 button btn-hover !bg-white">
                     <span className='text-gray-800 text-gr'>GET SUPPORT</span>
                   </Link>
                 </div>

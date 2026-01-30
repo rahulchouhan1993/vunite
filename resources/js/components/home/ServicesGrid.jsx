@@ -6,6 +6,7 @@ import ser3 from '../../assets/service/3.png';
 import ser2 from '../../assets/service/2.png';
 import ser1 from '../../assets/service/1.png';
 import ServiceItem from './ServiceItem';
+import { Link } from '@inertiajs/react';
 
 const ServicesGrid = () => {
   const cards = [
@@ -30,9 +31,9 @@ const ServicesGrid = () => {
         ))}
       </div>
       <div className="text-center mt-6 md:mt-12">
-        <button className="button btn-hover !bg-white text-sm border-gr px-12 py-3">
+        <Link href={'/services'} className="button btn-hover !bg-white text-sm border-gr px-12 py-3">
           <span className='text-gr uppercase'>View All Services</span>
-        </button>
+        </Link>
       </div>
     </div>
     </section>

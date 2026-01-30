@@ -22,13 +22,16 @@ Route::get('/participant', function () {
     return inertia('Participant');
 });
 
-Route::get('/terms-condition', function () {
+Route::get('/terms', function () {
     return inertia('Terms');
 });
 
-Route::get('/privacy-policy', function () {
+Route::get('/privacy', function () {
     return inertia('Privacy');
 });
+
+Route::redirect('/terms-condition', '/terms', 301);
+Route::redirect('/privacy-policy', '/privacy', 301);
 
 Route::match(['get', 'post'], '/referral', function (Request $request) {
 

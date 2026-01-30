@@ -1,6 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 import hero from '../../assets/hero.png';
 import ndis from '../../assets/ndis.jpeg';
+import { Link } from '@inertiajs/react';
 
 const HomeHeroSection = () => {
   return (
@@ -31,9 +32,9 @@ const HomeHeroSection = () => {
                       </div>
                     ))}
                   </div>
-                  <button className="button btn-hover !bg-white">
+                  <Link href={'/contact-us'} className="button btn-hover !bg-white">
                     <span className='text-gr px-6'>GET SUPPORT</span>
-                  </button>
+                  </Link>
                 </div>
               </section>
           </div>

@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import React from 'react';
 
 const CTABanner = () => {
@@ -11,10 +12,10 @@ const CTABanner = () => {
         <div className="w-full md:max-w-[50%] flex flex-col items-start md:ps-[100px] ps-0 md:border-l-2 border-l-0 border-gray-300">
           <p className="text-lg text-black mb-6  text-start max-w-sm">Discover why our clients trust us to provide exceptional care and support.</p>
           <div className="md:flex ">
-            <button className={`w-full lg:w-auto mb-4 md:mb-0 button bg-gr me-4`}>CALL NOW</button>
-            <button className="w-full lg:w-auto button btn-hover !bg-white">
+            <Link href={'/contact-us'} className={`w-full lg:w-auto mb-4 md:mb-0 button bg-gr me-4`}>CALL NOW</Link>
+            <Link href={'/contact-us'} className="w-full lg:w-auto button btn-hover !bg-white">
               <span className='text-gr'>GET SUPPORT</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

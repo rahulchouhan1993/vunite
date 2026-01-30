@@ -22,12 +22,12 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
               <h4 className="font-bold mb-6 text-xl">QUICK LINKS</h4>
               <ul className="space-y-3 text-sm opacity-90">
                 <li><Link href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Our Services</Link></li>
-                <li><Link href="/who-we-help" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Who We Help</Link></li>
-                <li><Link href="/about" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- About Us</Link></li>
-                <li><Link href="/work-with-us" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Work with us</Link></li>
+                <li><Link href="/#who-we-support" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Who We Support</Link></li>
+                <li><Link href="/about-us" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- About Us</Link></li>
+                <li><Link href="/#how-it-works" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- How It Works</Link></li>
                 <li><Link href="/referral" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Make a referral</Link></li>
                 <li><Link href="/faq" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- FAQs</Link></li>
-                <li><Link href="/register-interest" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Register your interest</Link></li>
+                <li><Link href="/contact-us" className="hover:text-gray-300 text-[15px] lg:text-[15px]">- Register your interest</Link></li>
               </ul>
             </div>
             <div>
@@ -45,9 +45,9 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
       </footer>
       <div className="container py-6 mx-auto flex flex-col md:flex-row justify-between text-sm md:text-[14px] md:text-[14px] opacity-70">
         <p className='text-gray-700'>Copyright © 2025 V Unite. All Rights Reserved</p>
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#" className=' text-gray-700 underline'>Terms & Condition</a>
-          <a href="#" className=' text-gray-700 underline'>Privacy Policy</a>
+        <div className="flex gap-6 lg:gap-14 mt-4 md:mt-0">
+          <Link href="/terms" className=' text-gray-700 underline hover:text-gray-900'>Terms & Conditions</Link>
+          <Link href="/privacy" className=' text-gray-700 underline hover:text-gray-900'>Privacy Policy</Link>
         </div>
       </div>
     </>

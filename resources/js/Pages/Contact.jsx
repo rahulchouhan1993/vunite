@@ -60,7 +60,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="lg:col-span-5">
+            <div  className="lg:col-span-5">
               <div className="space-y-4">
                 <a
                   href={`tel:${contact.phoneTel}`}
@@ -83,7 +83,7 @@ export default function Contact() {
                 </a>
 
                 <Link
-                  href="#"
+                  href="#contact-info"
                   className="w-full h-[60px] rounded-full bg-gr text-white font-semibold text-[14px] flex items-center justify-center gap-3"
                 >
                   <CalendarDays className="w-5 h-5" />
@@ -96,8 +96,8 @@ export default function Contact() {
 
         <section className="container m-auto mt-6 px-5 lg:px-0 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            <div className="lg:col-span-6">
-              <div className="bg-[#F3F4F6]   rounded-3xl p-8">
+            <div className="lg:col-span-6" id="contact-info" >
+              <div className="bg-[#F3F4F6]   rounded-3xl p-8" >
                 <h2 className="text-[18px] font-bold text-gray-800">Write Us</h2>
                 <form
                   className="mt-6 space-y-4"
@@ -128,7 +128,7 @@ export default function Contact() {
                   }}
                   method='post'
                 >
-                  <input
+                  <input 
                     value={data.name}
                     onBlur={() => setTouched((s) => ({ ...s, name: true }))}
                     onChange={(e) => {
@@ -160,7 +160,7 @@ export default function Contact() {
                   {(touched.phone && (clientErrors.phone || errors.phone)) && (
                     <div className="text-[12px] text-red-600 font-medium">{clientErrors.phone || errors.phone}</div>
                   )}
-                  <input
+                  <input 
                     value={data.email}
                     onBlur={() => setTouched((s) => ({ ...s, email: true }))}
                     onChange={(e) => {
