@@ -5,7 +5,7 @@ import stroies from '../../assets/real.png'
 const RealStories = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [thumbVariant, setThumbVariant] = useState('maxresdefault')
-  const videoId = 'ulrPXDNf5k4'
+  const videoId = 'qZOjPBJiBPg'
   const videoSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`
   const thumbSrc =
     thumbVariant === 'fallback' ? stroies : `https://i.ytimg.com/vi/${videoId}/${thumbVariant}.jpg`
