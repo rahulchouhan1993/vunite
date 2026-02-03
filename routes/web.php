@@ -56,15 +56,15 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
         try {
             // Server settings
             $mail->isSMTP();
-            $mail->Host       = env('MAIL_HOST');
+            $mail->Host       = env('MAIL_HOST','sh00073.cd.ds.network');
             $mail->SMTPAuth   = true;
-            $mail->Username   = env('MAIL_USERNAME');
-            $mail->Password   = env('MAIL_PASSWORD');
-            $mail->SMTPSecure = env('MAIL_ENCRYPTION'); // tls or ssl
-            $mail->Port       = env('MAIL_PORT');
+            $mail->Username   = env('MAIL_USERNAME','info@vunitesupportservices.com.au');
+            $mail->Password   = env('MAIL_PASSWORD','n!0D-$f%_sbO');
+            $mail->SMTPSecure = env('MAIL_ENCRYPTION','tls'); // tls or ssl
+            $mail->Port       = env('MAIL_PORT','587');
 
             // Sender
-            $mail->setFrom(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+            $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
 
             // Recipient
             $mail->addAddress('sainirupal878@gmail.com');
@@ -164,6 +164,107 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
         } catch (Exception $e) {
             return "❌ Mail Error: " . $mail->ErrorInfo;
         }
+
+        //Thank you email to user
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host       = env('MAIL_HOST','sh00073.cd.ds.network');
+            $mail->SMTPAuth   = true;
+            $mail->Username   = env('MAIL_USERNAME','info@vunitesupportservices.com.au');
+            $mail->Password   = env('MAIL_PASSWORD','n!0D-$f%_sbO');
+            $mail->SMTPSecure = env('MAIL_ENCRYPTION','tls'); // tls or ssl
+            $mail->Port       = env('MAIL_PORT','587');
+
+            // Sender
+            $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
+
+            // Recipient
+            $mail->addAddress($request->email);
+
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'Thank You for Contacting Us';
+            $mail->Body    = '<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta charset="UTF-8">
+                    <title>Thank You for Contacting Us</title>
+                    </head>
+                    <body style="margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; background-color:#f4f6f9;">
+
+                    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f6f9; padding:20px 0;">
+                    <tr>
+                        <td align="center">
+                        
+                        <!-- Email Container -->
+                        <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+
+                            <!-- Logo Section -->
+                            <tr>
+                            <td align="center" style="padding:30px 20px 10px 20px;">
+                                <img src="/unitelogo.png" alt="Company Logo" style="max-width:180px;">
+                            </td>
+                            </tr>
+
+                            <!-- Header -->
+                            <tr>
+                            <td align="center" style="padding:10px 30px;">
+                                <h2 style="margin:0; color:#2b4eff;">Thank You for Contacting Us</h2>
+                            </td>
+                            </tr>
+
+                            <!-- Body Content -->
+                            <tr>
+                            <td style="padding:20px 40px; color:'.$request->first_name.' '.$request->last_name.'</strong>,</p>
+
+                                <p>We’ve received your message and truly appreciate you reaching out to us.</p>
+
+                                <p>Our team is reviewing your enquiry, and we will get back to you as soon as possible, usually within <strong>24 business hours</strong>.</p>
+
+                                <p>If your request is urgent, feel free to reply to this email or call us directly on +61 449 799 946</p>
+
+                                <p>We look forward to assisting you and providing the support you need.</p>
+
+                                <p style="margin-top:30px;">Warm regards,<br>
+                                <strong>Vunite Support Services</strong></p>
+                            </td>
+                            </tr>
+
+                            <!-- Divider -->
+                            <tr>
+                            <td style="padding:0 40px;">
+                                <hr style="border:none; border-top:1px solid #eeeeee;">
+                            </td>
+                            </tr>
+
+                            <!-- Footer Section -->
+                            <tr>
+                            <td style="padding:20px 40px; font-size:13px; color:#777777;">
+                                <p style="margin:0;"><strong>Founder:</strong> Yuvraj Dhingra</p>
+                                <p style="margin:5px 0;">📧 Email: <a href="mailto:info@vunitesupportservices.com.au" style="color:#2b4eff; text-decoration:none;">info@vunitesupportservices.com.au</a></p>
+                                <p style="margin:5px 0;">📞 Phone: +61 449 799 946</p>
+                                <p style="margin-top:15px; font-size:12px; color:#aaaaaa;">
+                                © 2026 Vunite Support Services. All rights reserved.
+                                </p>
+                            </td>
+                            </tr>
+
+                        </table>
+                        <!-- End Container -->
+
+                        </td>
+                    </tr>
+                    </table>
+
+                    </body>
+                    </html>';
+
+            $mail->send();
+
+        } catch (Exception $e) {
+            return "❌ Mail Error: " . $mail->ErrorInfo;
+        }
         return back()->with('success', 'Referral submitted successfully!');
     }
 
@@ -191,15 +292,15 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
         try {
             // Server settings
             $mail->isSMTP();
-            $mail->Host       = env('MAIL_HOST');
+            $mail->Host       = env('MAIL_HOST','sh00073.cd.ds.network');
             $mail->SMTPAuth   = true;
-            $mail->Username   = env('MAIL_USERNAME');
-            $mail->Password   = env('MAIL_PASSWORD');
-            $mail->SMTPSecure = env('MAIL_ENCRYPTION'); // tls or ssl
-            $mail->Port       = env('MAIL_PORT');
+            $mail->Username   = env('MAIL_USERNAME','info@vunitesupportservices.com.au');
+            $mail->Password   = env('MAIL_PASSWORD','n!0D-$f%_sbO');
+            $mail->SMTPSecure = env('MAIL_ENCRYPTION','tls'); // tls or ssl
+            $mail->Port       = env('MAIL_PORT','587');
 
             // Sender
-            $mail->setFrom(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+            $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
 
             // Recipient
             $mail->addAddress('sainirupal878@gmail.com');
@@ -279,6 +380,107 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
 
                         </body>
                         </html>';
+
+            $mail->send();
+
+        } catch (Exception $e) {
+            return "❌ Mail Error: " . $mail->ErrorInfo;
+        }
+
+        //Thank you email to user
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host       = env('MAIL_HOST','sh00073.cd.ds.network');
+            $mail->SMTPAuth   = true;
+            $mail->Username   = env('MAIL_USERNAME','info@vunitesupportservices.com.au');
+            $mail->Password   = env('MAIL_PASSWORD','n!0D-$f%_sbO');
+            $mail->SMTPSecure = env('MAIL_ENCRYPTION','tls'); // tls or ssl
+            $mail->Port       = env('MAIL_PORT','587');
+
+            // Sender
+            $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
+
+            // Recipient
+            $mail->addAddress($request->email);
+
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'Thank You for Contacting Us';
+            $mail->Body    = '<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta charset="UTF-8">
+                    <title>Thank You for Contacting Us</title>
+                    </head>
+                    <body style="margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; background-color:#f4f6f9;">
+
+                    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f6f9; padding:20px 0;">
+                    <tr>
+                        <td align="center">
+                        
+                        <!-- Email Container -->
+                        <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+
+                            <!-- Logo Section -->
+                            <tr>
+                            <td align="center" style="padding:30px 20px 10px 20px;">
+                                <img src="/unitelogo.png" alt="Company Logo" style="max-width:180px;">
+                            </td>
+                            </tr>
+
+                            <!-- Header -->
+                            <tr>
+                            <td align="center" style="padding:10px 30px;">
+                                <h2 style="margin:0; color:#2b4eff;">Thank You for Contacting Us</h2>
+                            </td>
+                            </tr>
+
+                            <!-- Body Content -->
+                            <tr>
+                            <td style="padding:20px 40px; color:'.$request->name.'</strong>,</p>
+
+                                <p>We’ve received your message and truly appreciate you reaching out to us.</p>
+
+                                <p>Our team is reviewing your enquiry, and we will get back to you as soon as possible, usually within <strong>24 business hours</strong>.</p>
+
+                                <p>If your request is urgent, feel free to reply to this email or call us directly on +61 449 799 946</p>
+
+                                <p>We look forward to assisting you and providing the support you need.</p>
+
+                                <p style="margin-top:30px;">Warm regards,<br>
+                                <strong>Vunite Support Services</strong></p>
+                            </td>
+                            </tr>
+
+                            <!-- Divider -->
+                            <tr>
+                            <td style="padding:0 40px;">
+                                <hr style="border:none; border-top:1px solid #eeeeee;">
+                            </td>
+                            </tr>
+
+                            <!-- Footer Section -->
+                            <tr>
+                            <td style="padding:20px 40px; font-size:13px; color:#777777;">
+                                <p style="margin:0;"><strong>Founder:</strong> Yuvraj Dhingra</p>
+                                <p style="margin:5px 0;">📧 Email: <a href="mailto:info@vunitesupportservices.com.au" style="color:#2b4eff; text-decoration:none;">info@vunitesupportservices.com.au</a></p>
+                                <p style="margin:5px 0;">📞 Phone: +61 449 799 946</p>
+                                <p style="margin-top:15px; font-size:12px; color:#aaaaaa;">
+                                © 2026 Vunite Support Services. All rights reserved.
+                                </p>
+                            </td>
+                            </tr>
+
+                        </table>
+                        <!-- End Container -->
+
+                        </td>
+                    </tr>
+                    </table>
+
+                    </body>
+                    </html>';
 
             $mail->send();
 

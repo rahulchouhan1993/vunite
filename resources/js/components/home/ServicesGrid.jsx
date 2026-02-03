@@ -1,21 +1,21 @@
 import React from 'react';
-import ser6 from '../../assets/service/6.png';
-import ser5 from '../../assets/service/5.png';
-import ser4 from '../../assets/service/4.png';
-import ser3 from '../../assets/service/3.png';
-import ser2 from '../../assets/service/2.png';
-import ser1 from '../../assets/service/1.png';
+import ser6 from '../../assets/bg14.png';
+import ser5 from '../../assets/bg13.png';
+import ser4 from '../../assets/bg11.png';
+import ser3 from '../../assets/bg7.png';
+import ser2 from '../../assets/bg5.png';
+import ser1 from '../../assets/bg1.png';
 import ServiceItem from './ServiceItem';
 import { Link } from '@inertiajs/react';
 
 const ServicesGrid = () => {
   const cards = [
     { title: 'Daily Living Support', img: ser1, desc: ' Helping with personal care, meals, and everyday tasks. Helping with personal care, ' },
-    { title: 'Help to Manage Daily Activities', img: ser2, desc: 'Support with household tasks and personal routines.' },
-    { title: 'Community Participation', img: ser3, desc: 'Engage with community and social activities confidently.' },
-    { title: 'Therapeutic Supports', img: ser4, desc: 'Professional therapy services to improve wellbeing.' },
-    { title: 'Support Coordination', img: ser5, desc: 'Guidance to navigate and manage your NDIS plan.' },
-    { title: 'NDIS Plan Support', img: ser6, desc: 'Comprehensive assistance across your NDIS journey.' },
+    { title: 'Community Nursing', img: ser2, desc: 'Nursing services supporting health needs with coordinated clinical oversight.' },
+    { title: 'SDA Support', img: ser3, desc: 'Support within suitable accommodation that promotes safety, accessibility, and quality of life.' },
+    { title: 'Behaviour Plan Support', img: ser4, desc: 'Implementing agreed supports with consistent communication across your care team.' },
+    { title: 'Support Coordination', img: ser5, desc: 'Supporting you to understand your plan, connect services, and move towards your goals.' },
+    { title: 'Complex Support Coordination', img: ser6, desc: 'Specialist coordination for complex needs, risk management, and multi-provider collaboration.' },
   ];
 
   return (

@@ -13,7 +13,7 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
               </div>
               <div className="text-[15px] lg:text-[15px] space-y-2 opacity-90">
                 <p className='mb-2'><span className="font-light">Founder : </span> Yuvraj Dhingra</p>
-                <p className='mb-2'><span className="font-light">Address : </span> 68 Hanorah Avenue, Virginia, 5120</p>
+                {/* <p className='mb-2'><span className="font-light">Address : </span> 68 Hanorah Avenue, Virginia, 5120</p> */}
                 <p className='mb-2'><span className="font-light">Contact no : </span> +61 449 799 946</p>
                 <p className='mb-2'><span className="font-light">Email : </span> info@vunitesupportservices.com.au</p>
               </div>
@@ -33,12 +33,12 @@ export const Footer = ({  contactInfo, quickLinks, services }) => {
             <div>
               <h4 className="font-bold mb-6 text-xl">SERVICES</h4>
               <ul className="space-y-3 text-sm opacity-90">
-                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Support Worker Services</a></li>
-                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Community Nursing</a></li>
-                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Supported Independent Living</a></li>
-                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Specialised Disability Accommodation</a></li>
-                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Complex Hospital Discharge Planning</a></li>
-                <li><a href="#" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Veteran Community Nursing</a></li>
+                <li><a href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Core Supports</a></li>
+                <li><a href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">High Intensity & Community Nursing Care</a></li>
+                <li><a href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Specialist Disability Accommodation (SDA)</a></li>
+                <li><a href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Behaviour Support</a></li>
+                <li><a href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Specialist Support Coordination</a></li>
+                <li><a href="/services" className="hover:text-gray-300 text-[15px] lg:text-[15px]">Future Services</a></li>
               </ul>
             </div>
           </div>
