@@ -67,7 +67,7 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
             $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
 
             // Recipient
-            $mail->addAddress('sainirupal878@gmail.com');
+            $mail->addAddress('Yuvrajdhingra11@gmail.com');
 
             // Content
             $mail->isHTML(true);
@@ -166,6 +166,7 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
         }
 
         //Thank you email to user
+        $mail = new PHPMailer(true);
         try {
             // Server settings
             $mail->isSMTP();
@@ -180,7 +181,7 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
             $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
 
             // Recipient
-            $mail->addAddress($request->email);
+            $mail->addAddress($request->referee_email);
 
             // Content
             $mail->isHTML(true);
@@ -196,27 +197,19 @@ Route::match(['get', 'post'], '/referral', function (Request $request) {
                     <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f6f9; padding:20px 0;">
                     <tr>
                         <td align="center">
-                        
-                        <!-- Email Container -->
                         <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-
-                            <!-- Logo Section -->
                             <tr>
                             <td align="center" style="padding:30px 20px 10px 20px;">
-                                <img src="/unitelogo.png" alt="Company Logo" style="max-width:180px;">
+                                <img src="https://vunitesupportservices.com.au/unitelogo.png" alt="Company Logo" style="max-width:180px;">
                             </td>
                             </tr>
-
-                            <!-- Header -->
                             <tr>
                             <td align="center" style="padding:10px 30px;">
                                 <h2 style="margin:0; color:#2b4eff;">Thank You for Contacting Us</h2>
                             </td>
                             </tr>
-
-                            <!-- Body Content -->
                             <tr>
-                            <td style="padding:20px 40px; color:'.$request->first_name.' '.$request->last_name.'</strong>,</p>
+                            <td style="padding:20px 40px; color:#777777;"><p><strong>Hi '.$request->first_name.' '.$request->last_name.'</strong>,</p>
 
                                 <p>We’ve received your message and truly appreciate you reaching out to us.</p>
 
@@ -303,7 +296,7 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
             $mail->setFrom(env('MAIL_FROM_ADDRESS','info@vunitesupportservices.com.au'), env('MAIL_FROM_NAME','Vunitesupportservices'));
 
             // Recipient
-            $mail->addAddress('sainirupal878@gmail.com');
+            $mail->addAddress('Yuvrajdhingra11@gmail.com');
 
             // Content
             $mail->isHTML(true);
@@ -388,6 +381,7 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
         }
 
         //Thank you email to user
+        $mail = new PHPMailer(true);
         try {
             // Server settings
             $mail->isSMTP();
@@ -425,7 +419,7 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
                             <!-- Logo Section -->
                             <tr>
                             <td align="center" style="padding:30px 20px 10px 20px;">
-                                <img src="/unitelogo.png" alt="Company Logo" style="max-width:180px;">
+                                <img src="https://vunitesupportservices.com.au/unitelogo.png" alt="Company Logo" style="max-width:180px;">
                             </td>
                             </tr>
 
@@ -438,7 +432,7 @@ Route::match(['get', 'post'], '/contact-us', function (Request $request) {
 
                             <!-- Body Content -->
                             <tr>
-                            <td style="padding:20px 40px; color:'.$request->name.'</strong>,</p>
+                            <td style="padding:20px 40px; color:#777777;"><p><strong>Hi '.$request->name.'</strong>,</p>
 
                                 <p>We’ve received your message and truly appreciate you reaching out to us.</p>
 

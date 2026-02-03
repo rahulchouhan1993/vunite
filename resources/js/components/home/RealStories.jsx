@@ -61,10 +61,10 @@ const RealStories = () => {
           <h2 className="fading font-recoleta text-3xl md:text-4xl font-bold text-pink mb-6">Real Support.</h2>
           <p className="fading text-gray-800 text-xl mb-4">See how we support NDIS participants to live more confidently and independently every day.</p>
           <p className="fading text-gray-600 font-light mb-2 text-normal md:text-lg leading-relaxed">
-            We believe every person deserves respectful, reliable, and personalised support.
+            This video provides a general overview of the National Disability Insurance Scheme (NDIS), including how participants access funding, the types of supports available, and the roles of providers, support coordinators, and local area coordinators.
           </p>
           <p className="fading text-gray-600 mb-2 font-light text-normal md:text-lg leading-relaxed">
-            This short video shows how our team works closely with participants and families to create meaningful outcomes.
+            At V Unite Support Services, we believe informed participants and families are better placed to make confident decisions about their care and support options.
           </p>
         </div>
       </div>
